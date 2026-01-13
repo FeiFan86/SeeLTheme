@@ -14,6 +14,10 @@
 
 ## ✨ 特性
 
+### ⭐ 演示网址
+
+- [https://www.seel.cn](https://www.seel.cn)
+
 ### 🎨 双主题切换
 - **简洁化主题 (v12)**：干净现代，蓝白配色，适合追求简洁风格的用户
 - **玻璃态主题 (v7)**：渐变背景，毛玻璃效果，炫酷美观
@@ -348,8 +352,8 @@ SeeLTheme/
 
 ## 📮 联系方式
 
-- GitHub: [seel-theme/seel](https://github.com/seel-theme/seel)
-
+- GitHub: [seel-theme/seel](https://github.com/FeiFan86/SeeLTheme)
+- http://www.seel.cn
 ---
 
 <div align="center">
