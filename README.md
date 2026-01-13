@@ -87,7 +87,7 @@
 
 ```bash
 cd /usr/themes
-git clone https://github.com/seel-theme/seel SeeLTheme
+git clone https://github.com/FeiFan86/SeeLTheme
 ```
 
 ---
