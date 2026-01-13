@@ -1,0 +1,588 @@
+/*
+ * 文章评论区样式
+ */
+
+/* ========== 评论区容器 ========== */
+.comments-section {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 20px;
+    border:1px solid var(--border-color);
+    margin-top: 24px;
+}
+
+/* ========== 评论表单 ========== */
+.comment-form-wrapper {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.comment-form-wrapper h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+}
+
+.comment-form-wrapper .form-group {
+    margin-bottom: 14px;
+}
+
+.comment-form-wrapper textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 1.6;
+    resize: vertical;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.comment-form-wrapper textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.comment-form-wrapper .form-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.comment-form-wrapper .form-row input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.comment-form-wrapper .form-row input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.comment-form-wrapper .form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.comment-form-wrapper .btn-submit {
+    padding: 8px 20px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.comment-form-wrapper .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+.comment-form-wrapper .btn-cancel {
+    padding: 8px 20px;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.comment-form-wrapper .btn-cancel:hover {
+    background: var(--border-color);
+    color: var(--text-primary);
+}
+
+.comment-form-wrapper .form-tip {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* ========== 评论列表 ========== */
+.comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ========== 评论项 ========== */
+.comment-item {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+    margin-bottom: 6px;
+}
+
+.comment-item:hover {
+    border-color: var(--accent-primary);
+    background: var(--bg-card);
+}
+
+/* ========== 评论主体 ========== */
+.comment-item {
+    display: flex;
+    gap: 12px;
+}
+
+.comment-avatar {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--border-color);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comment-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ========== 评论头部 ========== */
+.comment-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.comment-author-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.comment-author {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.comment-author a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.comment-author a:hover {
+    color: var(--accent-secondary);
+    text-decoration: underline;
+}
+
+.comment-badge {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: white;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+/* ========== 回复信息 ========== */
+.comment-reply-info {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 12px;
+    color: var(--text-muted);
+    background: var(--bg-secondary);
+    padding: 2px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+/* ========== 楼层号 ========== */
+.comment-floor {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 11px;
+    color: var(--accent-primary);
+    background: rgba(59, 130, 246, 0.1);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.comment-time {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* ========== 评论内容容器 ========== */
+.comment-text-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+/* ========== 评论内容 ========== */
+.comment-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    flex: 1;
+    min-width: 0;
+    word-wrap: break-word;
+}
+
+/* 一级评论内容背景 */
+.comment-item[data-level="0"] .comment-text {
+    background: var(--bg-card);
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+}
+
+.comment-item[data-level="0"]:hover .comment-text {
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* 二级评论内容背景 */
+.comment-item[data-level="1"] .comment-text {
+    background: rgba(59, 130, 246, 0.05);
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.comment-item[data-level="1"]:hover .comment-text {
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* 三级评论内容背景 */
+.comment-item[data-level="2"] .comment-text {
+    background: rgba(96, 165, 250, 0.08);
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgba(96, 165, 250, 0.15);
+}
+
+.comment-item[data-level="2"]:hover .comment-text {
+    border-color: rgba(96, 165, 250, 0.25);
+}
+
+/* 四级及以上评论内容背景 */
+.comment-item[data-level="3"] .comment-text {
+    background: rgba(156, 163, 175, 0.08);
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgba(156, 163, 175, 0.15);
+}
+
+.comment-text p {
+    margin-bottom: 8px;
+}
+
+.comment-text p:last-child {
+    margin-bottom: 0;
+}
+
+.comment-text a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+.comment-text a:hover {
+    text-decoration: underline;
+}
+
+.comment-text pre {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+    overflow-x: auto;
+    margin: 16px 0;
+}
+
+.comment-text code {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-primary);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.comment-text blockquote {
+    border-left: 4px solid var(--accent-primary);
+    padding-left: 16px;
+    margin: 16px 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* ========== 子评论 ========== */
+/* 微信聊天风格嵌套 - 右侧阶梯式缩进 */
+.comment-children {
+    margin-top: 4px;
+    margin-left: 28px;
+    position: relative;
+}
+
+/* 回复连接线 */
+.comment-children::before {
+    content: '';
+    position: absolute;
+    left: -14px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--border-color);
+    opacity: 0.3;
+}
+
+.comment-children .comment-item {
+    background: var(--bg-card);
+    border-radius: 6px;
+    padding: 6px;
+    border: 1px solid transparent;
+    margin-bottom: 3px;
+    position: relative;
+}
+
+.comment-children .comment-item:hover {
+    background: var(--bg-secondary);
+    border-color: var(--accent-primary);
+}
+
+/* 第二层嵌套 */
+.comment-children .comment-children {
+    margin-left: 20px;
+}
+
+.comment-children .comment-children::before {
+    background: var(--border-color);
+    opacity: 0.25;
+}
+
+.comment-children .comment-children .comment-item {
+    background: var(--bg-secondary);
+    padding: 6px;
+}
+
+/* 第三层嵌套 */
+.comment-children .comment-children .comment-children {
+    margin-left: 16px;
+}
+
+.comment-children .comment-children .comment-children::before {
+    background: var(--border-color);
+    opacity: 0.2;
+}
+
+.comment-children .comment-children .comment-children .comment-item {
+    background: var(--bg-secondary);
+    padding: 6px;
+}
+
+/* 第四层及以上嵌套 */
+.comment-children .comment-children .comment-children .comment-children {
+    margin-left: 14px;
+}
+
+.comment-children .comment-children .comment-children .comment-children::before {
+    background: var(--border-color);
+    opacity: 0.15;
+}
+
+.comment-children .comment-children .comment-children .comment-children .comment-item {
+    background: var(--bg-secondary);
+    padding: 5px;
+}
+
+/* ========== 子评论头像调整 ========== */
+.comment-children .comment-avatar {
+    width: 28px;
+    height: 28px;
+}
+
+.comment-children .comment-children .comment-avatar {
+    width: 26px;
+    height: 26px;
+}
+
+.comment-children .comment-children .comment-children .comment-avatar {
+    width: 24px;
+    height: 24px;
+}
+
+/* ========== 子评论内容调整 ========== */
+.comment-children .comment-author {
+    font-size: 13px;
+}
+
+.comment-children .comment-text {
+    font-size: 13px;
+}
+
+.comment-children .comment-time {
+    font-size: 11px;
+}
+
+/* 第二层及以上进一步紧凑 */
+.comment-children .comment-children .comment-author {
+    font-size: 13px;
+}
+
+.comment-children .comment-children .comment-text {
+    font-size: 12px;
+}
+
+.comment-children .comment-children .comment-time {
+    font-size: 11px;
+}
+
+/* 第三层及以上更紧凑 */
+.comment-children .comment-children .comment-children .comment-author {
+    font-size: 12px;
+}
+
+.comment-children .comment-children .comment-children .comment-text {
+    font-size: 12px;
+}
+
+.comment-children .comment-children .comment-children .comment-time {
+    font-size: 10px;
+}
+
+/* ========== 评论操作按钮 ========== */
+.comment-actions {
+    margin-top: 0;
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+.comment-reply-link {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--text-muted);
+    background: transparent;
+    padding: 3px 10px;
+    border-radius: 6px;
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.comment-reply-link:hover {
+    color: var(--accent-primary);
+    background: rgba(59, 130, 246, 0.1);
+}
+
+/* ========== 无评论 ========== */
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* ========== 响应式 ========== */
+@media (max-width: 768px) {
+    .comments-section {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .comment-form-wrapper {
+        padding: 16px;
+    }
+
+    .comment-form-wrapper .form-row {
+        flex-direction: column;
+    }
+
+    .comment-item {
+        gap: 12px;
+    }
+
+    .comment-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .comment-children {
+        margin-left: 12px;
+        padding-left: 12px;
+    }
+
+    .comment-form-wrapper .form-submit {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .comment-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* ===== 修正轮播图按钮和点位置 ===== */
+    .hero-slider {
+        position: relative !important;
+    }
+
+    .slider-prev {
+        position: absolute !important;
+        left: 12px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+
+    .slider-next {
+        position: absolute !important;
+        right: 12px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+
+    .slider-dots {
+        position: absolute !important;
+        bottom: 16px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        z-index: 10 !important;
+    }
+}
